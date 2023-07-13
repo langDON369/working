@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="payment.css" />
+<script src="./index.js"></script>
+<div class="container">
+  <div class="card">
+    <a href="redirect.html">
+    <button class="proceed"><svg class="sendicon" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+</svg></button>
+    </a>
+   <img src="https://seeklogo.com/images/V/VISA-logo-62D5B26FE1-seeklogo.com.png" class="logo-card">
+ <label>Card number:</label>
+ <input id="user" type="text" class="input cardnumber"  placeholder="xxxx xxxx xxxx xxxx">
+ <label>Name:</label>
+ <input class="input name"  placeholder="xxxxxxxxxxxxxxx">
+ <label class="toleft">CVV:</label>
+ <input class="input toleft ccv" placeholder="xxx">
+  </div>
+  <div class="receipt">
+    <div class="col"><p>Cost:</p>
+    <h2 class="cost" id="amount"></h2>
+    <p></p>
+    <h2 class="seller"></h2>
+    </div>
+    <div class="col">
+      <p></p>
+      <h3 class="bought-items"></h3>
+      <!--p class="bought-items description">Gaming mouse with shiny lights</p>
+      <p class="bought-items price">$200 (50% discount)</p-->
+      <h3 class="bought-items"></h3>
+      <h3 class="bought-items"></h3>
+      <!--p class="bought-items description">Look mommmy, it has colors!</p>
+      <p class="bought-items price">$200 (50% discount)</p--><br>
+    </div>
+    <p class="comprobe"> .</p>
+    <script>
+      const total = localStorage.getItem("total")
+      // alert(total)
+      document.getElementById("amount").innerText = total
+    </script>
+  </div>
+</div>
